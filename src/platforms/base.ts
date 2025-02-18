@@ -12,7 +12,7 @@ export interface INativeSpeak {
    */
   speak: (
     text: string,
-    options: { voice?: string; speed?: number } | null,
+    options?: { voice?: string; speed?: number } | null,
     callback?: (error: Error | null) => void
   ) => void;
 
@@ -28,7 +28,7 @@ export interface INativeSpeak {
   export: (
     text: string,
     filename: string,
-    options: { voice?: string; speed?: number } | null,
+    options?: { voice?: string; speed?: number } | null,
     callback?: (error: Error | null) => void
   ) => void;
 
@@ -76,7 +76,7 @@ export abstract class PlatformBase implements INativeSpeak {
 
   speak(
     text: string,
-    options: { voice?: string; speed?: number } | null,
+    options?: { voice?: string; speed?: number } | null,
     callback?: (error: Error | null) => void,
   ) {
     const {
@@ -105,7 +105,7 @@ export abstract class PlatformBase implements INativeSpeak {
   export(
     text: string,
     filename: string,
-    options: { voice?: string; speed?: number } | null,
+    options?: { voice?: string; speed?: number } | null,
     callback?: (error: Error | null) => void,
   ) {
     const {
