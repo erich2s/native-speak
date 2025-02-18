@@ -5,6 +5,10 @@
   "description": "A simple text-to-speech library using system native tts engines for Node.js",
   "author": "erich2s",
   "license": "MIT",
+  "homepage": "https://github.com/erich2s/native-speak",
+  "repository": {
+    "url": "https://github.com/erich2s/native-speak"
+  },
   "keywords": [
     "tts",
     "text-to-speech",
@@ -17,6 +21,12 @@
       "require": "./dist/index.cjs"
     }
   },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
@@ -25,6 +35,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.2.1",
+    "@changesets/cli": "^2.27.12",
     "@eslint-react/eslint-plugin": "^1.26.2",
     "@types/node": "^22.13.4",
     "eslint": "^9.20.1",
