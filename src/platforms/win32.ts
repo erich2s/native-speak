@@ -3,7 +3,7 @@ import { PlatformBase } from "./base";
 const COMMAND = "powershell.exe";
 export class PlatformWin32 extends PlatformBase {
   buildSpeakCommand({ text, voice, speed }: { text: string; voice?: string; speed?: number }) {
-    const args = ["-Command"];
+    const args: string[] = [];
     const pipedData = `
       Add-Type -AssemblyName System.Speech;
       $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer;
@@ -11,14 +11,14 @@ export class PlatformWin32 extends PlatformBase {
       ${speed ? `$speak.Rate = ${Math.min(Math.max(Math.floor((speed - 175) / 50), -10), 10)};` : ""}
       $speak.Speak('${text.replace(/'/g, "''")}');
       $speak.Speak([Console]::In.ReadToEnd())
-    `;
-    const options = { shell: true };
+    `.trim();
+    const options = {};
 
     return { command: COMMAND, args, pipedData, options };
   }
 
   buildExportCommand({ text, filename, voice, speed }: { text: string; filename: string; voice?: string; speed?: number }) {
-    const args = ["-Command"];
+    const args: string[] = [];
     const pipedData = `
       Add-Type -AssemblyName System.Speech;
       $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer;
@@ -27,17 +27,18 @@ export class PlatformWin32 extends PlatformBase {
       $speak.SetOutputToWaveFile('${filename}');
       $speak.Speak('${text.replace(/'/g, "''")}');
       $speak.Dispose();
-    `;
-    const options = { shell: true };
+    `.trim();
+    const options = {};
 
     return { command: COMMAND, args, pipedData, options };
   }
 
   buildGetVoicesCommand() {
+    const script = `Add-Type -AssemblyName System.speech; $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer; $speak.GetInstalledVoices() | ForEach-Object { $_.VoiceInfo.Name }`;
     return {
       command: COMMAND,
-      args: ["-Command", "Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).GetInstalledVoices() | ForEach-Object { $_.VoiceInfo.Name }"],
-      options: { shell: true },
+      args: ["-Command", script],
+      options: {},
     };
   }
 }
