@@ -1,0 +1,39 @@
+{
+  "name": "native-speak",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "A simple text-to-speech library using system native tts engines for Node.js",
+  "author": "erich2s",
+  "license": "MIT",
+  "keywords": [
+    "tts",
+    "text-to-speech",
+    "speech",
+    "native"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "lint": "eslint . --fix",
+    "release": "pnpm lint && pnpm build && changeset version && changeset publish"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.2.1",
+    "@eslint-react/eslint-plugin": "^1.26.2",
+    "@types/node": "^22.13.4",
+    "eslint": "^9.20.1",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
