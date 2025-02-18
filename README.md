@@ -1,6 +1,6 @@
 # 🗣️ Native Speak
 
-This project is inspired by [say.js]("https://github.com/Marak/say.js"). It is a simple text-to-speech library for node.js using system native tts engines.
+This project is inspired by [say.js](https://github.com/Marak/say.js). It is a simple text-to-speech library for node.js using system native tts engines.
 
 ## ✨ Features
 
