@@ -1,5 +1,11 @@
 # native-speak
 
+## 0.0.4
+
+### Patch Changes
+
+- 1c7575e: update readme
+
 ## 0.0.3
 
 ### Patch Changes
