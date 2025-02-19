@@ -1,6 +1,6 @@
 import ns from "../src";
 
-const filename = "output.aiff";
+const filename = "output.m4a";
 ns.export(
   "Hello! This is from native system tts engine",
   filename,
