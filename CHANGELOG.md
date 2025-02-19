@@ -1,5 +1,11 @@
 # native-speak
 
+## 0.0.3
+
+### Patch Changes
+
+- 0771691: fix: export INativeSpeak type from index.ts
+
 ## 0.0.2
 
 ### Patch Changes
