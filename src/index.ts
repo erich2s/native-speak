@@ -21,3 +21,5 @@ export class NativeSpeakFactory {
 
 const ns = NativeSpeakFactory.create();
 export default ns;
+
+export type { INativeSpeak };
