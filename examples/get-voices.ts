@@ -1,4 +1,4 @@
-import ns from "../src";
+import { ns } from "../src";
 
 ns.getVoices((error, voices) => {
   if (error) {

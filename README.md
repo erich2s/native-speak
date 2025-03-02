@@ -23,7 +23,7 @@ pnpm add native-speak
 ## Quick Start
 
 ```typescript
-import ns from "native-speak";
+import { ns } from "native-speak";
 
 // Use default system voice and speed
 ns.speak("Hello!");

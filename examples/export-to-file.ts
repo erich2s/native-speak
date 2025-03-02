@@ -1,4 +1,4 @@
-import ns from "../src";
+import {ns} from "../src";
 
 const filename = "output.m4a";
 ns.export(

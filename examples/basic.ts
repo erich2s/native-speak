@@ -1,4 +1,4 @@
-import ns from "../src";
+import { ns } from "../src";
 
 ns.speak(
   "Hello! This is from native system tts engine",

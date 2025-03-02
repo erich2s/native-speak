@@ -19,7 +19,6 @@ export class NativeSpeakFactory {
   }
 }
 
-const ns = NativeSpeakFactory.create();
-export default ns;
+export const ns = NativeSpeakFactory.create();
 
 export type { INativeSpeak };
