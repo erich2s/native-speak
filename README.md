@@ -1,6 +1,6 @@
 # 🗣️ Native Speak
 
-This project is inspired by [say.js](https://github.com/Marak/say.js). It provides a simple way to use the native text-to-speech (TTS) engines on Windows and MacOS.
+Native Speak is the modern version of [say.js](https://github.com/Marak/say.js). It provides a simple way to use the native text-to-speech (TTS) engines on Windows and MacOS.
 
 ## ✨ Features
 
@@ -12,6 +12,7 @@ This project is inspired by [say.js](https://github.com/Marak/say.js). It provid
 
 - Windows (using `SAPI`)
 - macOS (using `say` command)
+- Linux (not supported yet, welcome PRs!)
 
 ## Installation
 
