@@ -1,5 +1,11 @@
 # native-speak
 
+## 0.1.0
+
+### Minor Changes
+
+- a9a67c0: refactor: update import statements to use named exports for consistency
+
 ## 0.0.4
 
 ### Patch Changes

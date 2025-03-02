@@ -1,7 +1,7 @@
 {
   "name": "native-speak",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "packageManager": "pnpm@10.3.0",
   "description": "A simple text-to-speech library using system native tts engines for Node.js",
   "author": "erich2s",
